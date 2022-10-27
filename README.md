@@ -43,17 +43,113 @@
   - In ` C++ ` language 
   
     ```
+    // C++ program to demonstrate rectangle
+    // over a self-formed background image
+
+    #include <iostream>
+    #include <opencv2/core/core.hpp>
     
+    // Drawing shapes
+    #include <opencv2/imgproc.hpp>
+    
+    #include <opencv2/highgui/highgui.hpp>
+    using namespace cv;
+    using namespace std;
+    
+    // Driver Code
+    int main(int argc, char** argv)
+    {
+    	// Creating a blank image with
+    	// white background
+    	Mat image(500, 500, CV_8UC3,
+    			Scalar(255, 255, 255));
+    
+    	// Check if the image is created
+    	// successfully or not
+    	if (!image.data) {
+    		std::cout << "Could not open or "
+    				<< "find the image\n";
+    
+    		return 0;
+    	}
+    
+    	// Top Left Corner
+    	Point p1(30, 30);
+    
+    	// Bottom Right Corner
+    	Point p2(255, 255);
+    
+    	int thickness = 2;
+    
+    	// Drawing the Rectangle
+    	rectangle(image, p1, p2,
+    			Scalar(255, 0, 0),
+    			thickness, LINE_8);
+    
+    	// Show our image inside a window
+    	imshow("Output", image);
+    	waitKey(0);
+    
+    	return 0;
+    }
+
     ```
   - In ` JAVA ` language 
   
     ```
-    
+    // java program to draw a ellipse
+    // using drawOval function.
+    import java.awt.*;
+    import javax.swing.*;
+     
+    public class ellipse extends JApplet {
+     
+        public void init()
+        {
+            // set size
+            setSize(400, 400);
+     
+            repaint();
+        }
+     
+        // paint the applet
+        public void paint(Graphics g)
+        {
+            // set Color for rectangle
+            g.setColor(Color.red);
+     
+            // draw a ellipse
+            g.drawOval(100, 100, 150, 100);
+        }
+    }
     ```
   - In ` Python ` language 
     
     ```
+    # draw Rectangle in Python Turtle
+    import turtle
+
+    t = turtle.Turtle()
+
+    l = int(input("Enter the length of the Rectangle: "))
+    w = int(input("Enter the width of the Rectangle: "))
+
+    # drawing first side
+    t.forward(l) # Forward turtle by l units
+    t.left(90) # Turn turtle by 90 degree
     
+    # drawing second side
+    t.forward(w) # Forward turtle by w units
+    t.left(90) # Turn turtle by 90 degree
+
+    # drawing third side
+    t.forward(l) # Forward turtle by l units
+    t.left(90) # Turn turtle by 90 degree
+    
+    # drawing fourth side
+    t.forward(w) # Forward turtle by w units
+    t.left(90) # Turn turtle by 90 degree
+
     ```
    <br />
  
