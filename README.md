@@ -59,7 +59,7 @@
 <details id=3 open>
 <summary><h5>3. Write a program to draw a line using Bresenham’s line drawing algorithm</h5></summary>
 
-- In ` C ` language
+  - In ` C ` language
     
     ```
     
